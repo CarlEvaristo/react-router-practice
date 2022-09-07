@@ -13,7 +13,7 @@ function Detail() {
             <h3>Price: ${item.price}</h3>
             <p>{item.description}</p>
             <Link to="/products" className="backBtn">
-                <i class="fa-solid fa-rotate-left"></i> Back to all Products
+                <i className="fa-solid fa-rotate-left"></i> Back to all Products
             </Link>
         </>
 

@@ -14,6 +14,7 @@ function App() {
     return (
         <div className="container">
             <nav>
+                <h1 className="logoTitle">Shoply</h1>
                 <Link to="/" className={`menuItem marginLeft ${homeClass}`}>Home</Link>
                 <Link to="/products" className={`menuItem ${productClass}`}>Products</Link>
             </nav>
