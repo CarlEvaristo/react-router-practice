@@ -2,6 +2,7 @@ import React from "react"
 import { Link, Routes, Route } from "react-router-dom"
 import Home from "./Home"
 import Products from "./Products"
+import Detail from "./Detail"
 import { useLocation } from "react-router-dom";
 
 function App() { 
@@ -19,8 +20,9 @@ function App() {
 
             <main>
                 <Routes>
-                    <Route exact path="/" element={<Home />}/>
-                    <Route path="/products" element={<Products />}/>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/products/:id" element={ <Detail />} />
                 </Routes>
             </main>
 
