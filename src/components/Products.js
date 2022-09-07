@@ -5,9 +5,9 @@ import { Link } from "react-router-dom"
 function Products() {
     const products = data.map(item => (
     <li key={item.id}>
-        <Link to={`/products/${item.id}`}>{item.name}</Link>
+        <Link to={`/products/${item.id}`} className="linkItem"><span>{item.name}</span>  <span>$ {item.price},-</span></Link>
     </li>))
-    const prices = data.map(item => <li key={item.id}> ${item.price}</li>)
+    // const prices = data.map(item => <li key={item.id}> ${item.price}</li>)
     
     return (
         <>
@@ -15,9 +15,6 @@ function Products() {
             <div className="gridBox">
             <ul>
                 {products}
-            </ul>
-            <ul className="prices">
-                {prices}
             </ul>
             </div>
         </>

@@ -24,7 +24,6 @@ h1 {
 }
 p{
     font-size: 2rem;
-    margin:0;
 }
 a {
     text-decoration: none;
@@ -65,13 +64,11 @@ nav {
 }
 main {
     padding:1em 2em;
-    overflow:scroll;
+    overflow-y:auto;
     height:100%;
 }
 .gridBox {
     width:100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
 }
 ul{
     padding-left:1em;
@@ -83,11 +80,25 @@ ul.prices {
 li {
     padding: 0.5em 0;
     font-size: 1.8rem;
+    border-bottom: 1px rgb(208, 208, 208) solid;
 }
-
+.linkItem{
+    display: flex;
+    justify-content: space-between;
+}
+.backBtn  {
+    display:block;
+    text-align: center;
+    padding: 0.9em 0;
+    width:300px;
+    border: none;
+    background-color: rgb(237, 237, 237);
+    margin-top: 2em;
+}
 @media (max-width:600px) {
     .container {
-        height:90%;
-        width: 90%;
+        border-radius: 0px;
+        height:100%;
+        width: 100%;
     }
 }
