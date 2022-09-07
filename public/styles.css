@@ -47,7 +47,7 @@ a:active {
 nav {
     background-color: rgb(237, 237, 237);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 4em 0;
+    padding: 2em 0;
     display: flex;
 }
 .menuItem {
@@ -75,11 +75,19 @@ main {
 }
 ul{
     padding-left:1em;
+    padding-bottom: 5em;
 }
 ul.prices {
     list-style: none;
 }
 li {
     padding: 0.5em 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width:600px) {
+    .container {
+        height:90%;
+        width: 90%;
+    }
 }
