@@ -62,20 +62,8 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2em 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-.menuItem {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-decoration: none;
-    margin: 0 1em 0 0;
-    color:rgb(138, 138, 138);
-}
-.marginLeft {
-    margin: 0 1em 0 auto;
-}
-.active{
-    color: rgb(9, 169, 255);
 }
 main {
     padding:4rem;
@@ -117,16 +105,85 @@ li {
 .backBtn:active{
     background-color: rgb(223, 223, 223);
 }
+.hamburgerBtn{
+    display:none;
+    margin:0 4rem 0 auto;
+    cursor: pointer;
+}
+.hamburgerBar{
+    width: 40px;
+    height:7px;
+    background-color:rgb(138, 138, 138);
+    margin:6px 0;
+    border-radius: 3px;
+}
+.menu{
+    display: flex;
+}
+.menuItem {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 1em 0 0;
+    color:rgb(138, 138, 138);
+}
+.active{
+    color: rgb(9, 169, 255);
+}
 @media (max-width:600px) {
+    .nav{
+        position:absolute;
+        width:100%;
+        z-index: 50;
+    }
+    .menu{
+        position:absolute;
+        z-index: 10;
+        width: 100%;
+        top:-150px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(223, 223, 223);
+    }
+    .menu.moveDown{
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;   
+        top:0px;
+        transform:translateY(120px);
+        transition: transform 150ms;
+    }
+    .moveDown{
+        transform:translateY(120px);
+        transition: transform 150ms;
+    }
+    .hide {
+        display:none;
+    }
+    .menuItem{
+        padding:0.5em 0;
+        border-bottom: solid 1px rgb(193, 193, 193);
+        margin: 0;
+    }
+    .hamburgerBtn{
+        display:block;
+    }
+    .topBar {
+        transform:translateY(7px) rotate(45deg) ;
+        transition: transform 250ms;
+    }
+    .middleBar {
+        display: none;    
+    }
+    .bottomBar {
+        transform:translateY(-7px) rotate(-45deg) ;
+        transition: transform 250ms;
+    }
     .container {
         border-radius: 0px;
         height:100%;
         width: 100%;
     }
     .logoTitle {
-        font-size: 3rem;
-    }
-    .menuItem {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 }
