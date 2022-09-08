@@ -8,15 +8,13 @@ import { useLocation } from "react-router-dom";
 function App() { 
     let location = useLocation();
     location = (location.pathname.split("/"))[1]
-    const homeClass = location === "" ? "active" : ""
-    const productClass = location === "products" ? "active" : ""
-
+    const active = path => path === "/"+location ? "active" : ""
     return (
         <div className="container">
             <nav>
                 <h1 className="logoTitle">Shoply</h1>
-                <Link to="/" className={`menuItem marginLeft ${homeClass}`}>Home</Link>
-                <Link to="/products" className={`menuItem ${productClass}`}>Products</Link>
+                <Link to="/" className={`menuItem marginLeft ${active("/")}`}>Home</Link>
+                <Link to="/products" className={`menuItem ${active("/products")}`}>Products</Link>
             </nav>
 
             <main>
