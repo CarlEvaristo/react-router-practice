@@ -115,4 +115,10 @@ li {
         height:100%;
         width: 100%;
     }
+    .logoTitle {
+        font-size: 3rem;
+    }
+    .menuItem {
+        font-size: 2rem;
+    }
 }
