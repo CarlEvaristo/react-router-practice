@@ -32,7 +32,7 @@ function App() {
                 </div>
             </nav>
 
-            <main className={menuOn ? "moveDown" : undefined} >
+            <main >
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/products" element={<Products />} />
